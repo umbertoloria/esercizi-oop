@@ -1,5 +1,9 @@
 package settimana2.esercizio3;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
 public class Name {
 
 	public static final int SIGNORA = 0;
@@ -66,9 +70,29 @@ public class Name {
 		System.out.println("Cognome:       " + getSurname());
 		System.out.println("Titolo:        " + getTitoloString());
 		System.out.println("Iniziali:      " + getInitials());
-		System.out.println("Nome Cognome:  " + getNameSurname());
-		System.out.println("Cognome Nome:  " + getSurName());
+		System.out.println("Nome cognome:  " + getNameSurname());
+		System.out.println("Cognome nome:  " + getSurName());
 		System.out.println("Nome completo: " + getCompleteName());
+	}
+
+	public void print(PrintStream out) {
+		out.println("Nome:          " + getName());
+		out.println("Cognome:       " + getSurname());
+		out.println("Titolo:        " + getTitoloString());
+		out.println("Iniziali:      " + getInitials());
+		out.println("Nome cognome:  " + getNameSurname());
+		out.println("Cognome nome:  " + getSurName());
+		out.println("Nome completo: " + getCompleteName());
+	}
+
+	public static void main () {
+		Name a = new Name("Umberto", "Loria", Name.SIGNORE);
+		File file = new File("name.log");
+		try (PrintStream out = new PrintStream(file)) {
+			a.print(out);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
