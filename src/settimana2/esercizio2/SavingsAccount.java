@@ -11,13 +11,18 @@ public class SavingsAccount extends BankAccount {
 		this.interestRate = initialInterestRate;
 	}
 
+	/**
+	 * Operazione da effettuare ogni anno.
+	 */
 	public void addInterest() {
 		this.balance += interestRate / 100 * balance;
 	}
 
+	/**
+	 * @return Interesse memorizzato.
+	 */
 	public double getInterestRate() {
 		return interestRate;
 	}
-
 
 }

@@ -11,14 +11,23 @@ public class BankAccount {
 		this.balance = initialBalance;
 	}
 
+	/**
+	 * @param amount Quota da aggiungere al bilancio.
+	 */
 	public void deposit(double amount) {
 		this.balance += amount;
 	}
 
+	/**
+	 * @param amount Quota da diminuire al bilancio.
+	 */
 	public void withdraw(double amount) {
 		this.balance -= amount;
 	}
 
+	/**
+	 * @return Fornisce il bilancio corrente.
+	 */
 	public double getBalance() {
 		return balance;
 	}

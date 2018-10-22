@@ -19,6 +19,12 @@ public class Name {
 	private String surName;
 	private String completeName;
 
+	/**
+	 * @param name    Nome della persona di riferimento.
+	 * @param surname Cognome della persona di riferimento.
+	 * @param titolo  Può essere Signora, Signore o Signorina.
+	 * @see Name
+	 */
 	public Name(String name, String surname, int titolo) {
 		this.name = name;
 		this.surname = surname;
@@ -33,34 +39,59 @@ public class Name {
 		completeName = titoli[titolo] + " " + name + " " + surname;
 	}
 
+	/**
+	 * @return Nome memorizzato.
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @return Cognome memorizzato.
+	 */
 	public String getSurname() {
 		return surname;
 	}
 
+	/**
+	 * @return Iniziali del nome e cognome.
+	 */
 	public String getInitials() {
 		return initials;
 	}
 
+	/**
+	 * @return Nome e cognome separati da una virgola.
+	 */
 	public String getNameSurname() {
 		return nameSurname;
 	}
 
-	public String getCompleteName() {
-		return completeName;
-	}
-
+	/**
+	 * @return Cognome e nome separati da una virgola.
+	 */
 	public String getSurName() {
 		return surName;
 	}
 
+	/**
+	 * @return Nome completo.
+	 */
+	public String getCompleteName() {
+		return completeName;
+	}
+
+	/**
+	 * @return Il titolo memorizzato in valori numerici.
+	 * @see Name
+	 */
 	public int getTitolo() {
 		return titolo;
 	}
 
+	/**
+	 * @return Il titolo memorizzato (Signora, Signore, Signorina).
+	 */
 	public String getTitoloString() {
 		return titoli[titolo];
 	}
@@ -85,7 +116,7 @@ public class Name {
 		out.println("Nome completo: " + getCompleteName());
 	}
 
-	public static void main () {
+	public static void main() {
 		Name a = new Name("Umberto", "Loria", Name.SIGNORE);
 		File file = new File("name.log");
 		try (PrintStream out = new PrintStream(file)) {

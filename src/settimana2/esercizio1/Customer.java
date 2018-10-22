@@ -1,7 +1,5 @@
 package settimana2.esercizio1;
 
-import settimana2.esercizio1.BankAccount;
-
 public class Customer {
 
 	private String nome, cognome;
