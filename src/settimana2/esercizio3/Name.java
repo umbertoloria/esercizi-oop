@@ -19,12 +19,6 @@ public class Name {
 	private String surName;
 	private String completeName;
 
-	/**
-	 * @param name    Nome della persona di riferimento.
-	 * @param surname Cognome della persona di riferimento.
-	 * @param titolo  Può essere Signora, Signore o Signorina.
-	 * @see Name
-	 */
 	public Name(String name, String surname, int titolo) {
 		this.name = name;
 		this.surname = surname;
@@ -40,57 +34,65 @@ public class Name {
 	}
 
 	/**
-	 * @return Nome memorizzato.
+	 Gets the name of a person.
+	 @return the name
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * @return Cognome memorizzato.
+	 Gets the surname of a person.
+	 @return the surname
 	 */
 	public String getSurname() {
 		return surname;
 	}
 
 	/**
-	 * @return Iniziali del nome e cognome.
+	 Gets the initials of a person.
+	 @return initials
 	 */
 	public String getInitials() {
 		return initials;
 	}
 
 	/**
-	 * @return Nome e cognome separati da una virgola.
+	 Gets the name and surname of a person.
+	 @return name and surname (separated by a coma)
 	 */
 	public String getNameSurname() {
 		return nameSurname;
 	}
 
 	/**
-	 * @return Cognome e nome separati da una virgola.
+	 Gets the surname and name of a person.
+	 @return surname and name (separated by a coma)
 	 */
 	public String getSurName() {
 		return surName;
 	}
 
 	/**
-	 * @return Nome completo.
+	 Gets the complete name of a person.
+	 @return complete name
 	 */
 	public String getCompleteName() {
 		return completeName;
 	}
 
 	/**
-	 * @return Il titolo memorizzato in valori numerici.
-	 * @see Name
+	 Gets the title of a person.
+	 @return the title (memorized by numeric values)
+	 @see Name
 	 */
 	public int getTitolo() {
 		return titolo;
 	}
 
 	/**
-	 * @return Il titolo memorizzato (Signora, Signore, Signorina).
+	 Gets the title of a person.
+	 @return the title (like Signora, Signore, Signorina)
 	 */
 	public String getTitoloString() {
 		return titoli[titolo];

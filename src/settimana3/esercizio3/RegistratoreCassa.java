@@ -11,10 +11,12 @@ public class RegistratoreCassa {
 	private int[] acquisti = new int[]{0, 0};
 
 	/**
-	 * @param prodotto Valore numerico degli interni della classe.
-	 * @param quantità Quantità dei prodotti indicati.
-	 * @param soldi    Soldi porti al commesso dal cliente.
-	 * @return Il resto che il commesso porge al cliente.
+	 Simulates a buy of a product, money given from a customer and the change.
+	 @param prodotto numeric value of a product
+	 @param quantità quantity of products
+	 @param soldi    money given from the customer
+	 @return change
+	 @see RegistratoreCassa
 	 */
 	public double acquisto(int prodotto, int quantità, double soldi) {
 		if (prodotto != ACQUA_1L && prodotto != COCACOLA_33ML) {

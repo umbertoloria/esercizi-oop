@@ -1,11 +1,11 @@
 package launcher;
 
-import settimana2.esercizio3.Name;
+import settimana6.interfacce.DataSet;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		Name.main();
+		DataSet.main();
 	}
 
 }

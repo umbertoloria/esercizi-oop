@@ -3,7 +3,7 @@ package settimana2.esercizio1;
 public class Customer {
 
 	private String nome, cognome;
-	private BankAccount ba = new BankAccount();
+	private BankAccount ba = new BankAccount(0);
 
 	public Customer(String nome, String cognome) {
 		this.nome = nome;

@@ -6,7 +6,7 @@ public class DistributoreBibite {
 	private int gettoniCount = 0;
 	private int gettoniEver = 0;
 
-	public DistributoreBibite (int lattineCount) {
+	public DistributoreBibite(int lattineCount) {
 		this.lattineCount = lattineCount;
 	}
 
