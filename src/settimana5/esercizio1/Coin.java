@@ -1,6 +1,6 @@
 package settimana5.esercizio1;
 
-import settimana6.interfacce.Measurable;
+import settimana6.Measurable;
 
 public class Coin implements Measurable {
 

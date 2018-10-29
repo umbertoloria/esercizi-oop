@@ -1,11 +1,11 @@
 package launcher;
 
-import settimana6.interfacce.DataSet;
+import settimana7.esercizio3.Country;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		DataSet.main();
+		Country.main();
 	}
 
 }

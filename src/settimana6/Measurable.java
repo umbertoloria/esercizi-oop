@@ -1,4 +1,4 @@
-package settimana6.interfacce;
+package settimana6;
 
 public interface Measurable {
 

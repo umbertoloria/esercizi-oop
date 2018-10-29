@@ -1,7 +1,4 @@
-package settimana6.interfacce;
-
-import settimana2.esercizio1.BankAccount;
-import settimana5.esercizio1.Coin;
+package settimana6;
 
 public class DataSet {
 
@@ -33,21 +30,6 @@ public class DataSet {
 
 	public Measurable getMax() {
 		return max;
-	}
-
-	public static void main() {
-
-		DataSet ds = new DataSet();
-
-		ds.add(new BankAccount(2300));
-		ds.add(new BankAccount(1900));
-		ds.add(new BankAccount(2000));
-		ds.add(new Coin("1 euro", 1));
-
-		System.out.println("Saldo medio   : " + ds.getAverage());
-		System.out.println("Saldo maggiore: " + ds.getMax().getMeasure());
-		System.out.println("Saldo minore  : " + ds.getMin().getMeasure());
-
 	}
 
 }

@@ -1,6 +1,6 @@
 package settimana2.esercizio1;
 
-import settimana6.interfacce.Measurable;
+import settimana6.Measurable;
 
 public class BankAccount implements Measurable {
 
