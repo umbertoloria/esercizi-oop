@@ -1,2 +1,2 @@
 # Esercizi OOP
-Repository contenente banalità.
+Ignora questo repository.

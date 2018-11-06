@@ -1,6 +1,6 @@
 package settimana7.esercizio1;
 
-import settimana2.esercizio1.BankAccount;
+import banking.BankAccount;
 import settimana6.DataSet;
 import settimana6.Measurable;
 
@@ -40,7 +40,6 @@ public class Quiz implements Measurable {
 		a.add(new Quiz(5));
 		a.add(new Quiz(4));
 		a.add(new Quiz(4));
-		a.add(new BankAccount(400));
 		double av = a.getAverage();
 		System.out.println(av);
 

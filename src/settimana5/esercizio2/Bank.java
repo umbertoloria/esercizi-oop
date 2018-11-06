@@ -1,6 +1,6 @@
 package settimana5.esercizio2;
 
-import settimana2.esercizio1.BankAccount;
+import banking.BankAccount;
 
 import java.util.Hashtable;
 

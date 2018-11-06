@@ -1,11 +1,11 @@
 package launcher;
 
-import settimana7.esercizio3.Country;
+import banking.AccountTest;
 
-public class Launcher {
+public abstract class Launcher {
 
 	public static void main(String[] args) {
-		Country.main();
+		AccountTest.main();
 	}
 
 }
