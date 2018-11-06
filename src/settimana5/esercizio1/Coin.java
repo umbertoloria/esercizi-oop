@@ -2,25 +2,25 @@ package settimana5.esercizio1;
 
 import settimana6.Measurable;
 
-public class Coin implements Measurable {
+public class Coin implements Measurable, Cloneable {
 
 	private String nome;
 	private double valore;
 
-	public Coin(String nome, double valore) {
+	Coin(String nome, double valore) {
 		this.nome = nome;
 		this.valore = valore;
 	}
 
-	public String getNome() {
+	String getNome() {
 		return nome;
 	}
 
-	public double getValore() {
+	double getValore() {
 		return valore;
 	}
 
-	public boolean equals(Coin moneta) {
+	boolean equals(Coin moneta) {
 		return nome.equals(moneta.getNome());
 	}
 
@@ -30,5 +30,13 @@ public class Coin implements Measurable {
 
 	public double getMeasure() {
 		return valore;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj != null && getClass() == obj.getClass()) {
+			return nome.equals(((Coin) obj).nome) && valore == ((Coin) obj).valore;
+		}
+		return false;
 	}
 }

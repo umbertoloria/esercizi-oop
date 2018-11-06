@@ -1,11 +1,11 @@
 package launcher;
 
-import banking.AccountTest;
+import settimana8.Pair;
 
 public abstract class Launcher {
 
 	public static void main(String[] args) {
-		AccountTest.main();
+		Pair.main();
 	}
 
 }

@@ -1,8 +1,10 @@
 package banking;
 
+import settimana2.esercizio1.Customer;
+
 public class AccountTest {
 
-	public static void main() {
+	public static void mainTest() {
 		BankAccount mamma = new SavingsAccount(10000, .5);
 		BankAccount umberto = new CheckingAccount(100);
 
@@ -18,6 +20,28 @@ public class AccountTest {
 
 		mamma.print();
 		umberto.print();
+	}
+
+	public static void mainCloneCustomer() {
+		Customer a = new Customer("Umberto", "Loria");
+		a.deposit(1000);
+
+		Customer b = (Customer) a.clone();
+		b.deposit(100);
+
+		a.print();
+		System.out.println();
+		b.print();
+	}
+
+	public static void mainCloneSavingsAccount() {
+		SavingsAccount a = new SavingsAccount(120, 10);
+		SavingsAccount b = (SavingsAccount) a.clone();
+		a.deposit(1000);
+
+		a.print();
+		System.out.println();
+		b.print();
 	}
 
 }

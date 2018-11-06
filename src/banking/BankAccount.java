@@ -2,7 +2,7 @@ package banking;
 
 /**
  A Bank Account has a balance that can be changed by deposits and withdrawals. */
-public class BankAccount {
+public class BankAccount implements Cloneable {
 
 	private double balance;
 
@@ -43,12 +43,26 @@ public class BankAccount {
 	 @param amount is the quantity of money that will be transferred
 	 @param other  will get the amount of money, taken out from the bank account that's willing to transfer the money
 	 */
-	public void transfer(double amount, BankAccount other) {
+	void transfer(double amount, BankAccount other) {
 		withdraw(amount);
 		other.deposit(amount);
 	}
 
+	@Override
+	public String toString() {
+		return getClass().getName() + "[balance=" + balance + "]";
+	}
+
+	public Object clone() {
+		try {
+			return super.clone();
+		} catch (CloneNotSupportedException e) {
+			return null;
+		}
+	}
+
 	public void print() {
+		System.out.println(this);
 		System.out.printf("Saldo: %6.2f €\n", balance);
 	}
 

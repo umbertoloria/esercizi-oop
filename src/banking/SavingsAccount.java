@@ -11,7 +11,7 @@ public class SavingsAccount extends BankAccount {
 	 @param initialBalance      will be the new initial balance
 	 @param initialInterestRate will be the initial interest rate
 	 */
-	public SavingsAccount(double initialBalance, double initialInterestRate) {
+	SavingsAccount(double initialBalance, double initialInterestRate) {
 		super(initialBalance);
 		this.interestRate = initialInterestRate;
 	}
@@ -19,16 +19,13 @@ public class SavingsAccount extends BankAccount {
 	/**
 	 Adds interests on the Savings Account. Do it once a year!
 	 */
-	public void addInterest() {
+	void addInterest() {
 		deposit(getBalance() * interestRate / 100);
 	}
 
-	/**
-	 Gets the interest of the Savings Account.
-	 @return the interest
-	 */
-	public double getInterestRate() {
-		return interestRate;
+	@Override
+	public String toString() {
+		return getClass().getName() + "[balance=" + getBalance() + ",interestRate=" + interestRate + "]";
 	}
 
 }

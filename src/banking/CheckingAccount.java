@@ -6,13 +6,14 @@ public class CheckingAccount extends BankAccount {
 
 	private static final int FREE_TRANSACTIONS = 3;
 	private static final double TRANSACTION_FEE = 2;
+
 	private int transactionCount = 0;
 
 	/**
 	 Constructs a Checking Account with the initial balance assigned.
 	 @param initialBalance will be the new initial balance
 	 */
-	public CheckingAccount(double initialBalance) {
+	CheckingAccount(double initialBalance) {
 		super(initialBalance);
 	}
 
@@ -31,10 +32,16 @@ public class CheckingAccount extends BankAccount {
 	/**
 	 Withdraws the fees on every transaction over the free transactions limit given.
 	 */
-	public void deductFees() {
+	void deductFees() {
 		if (transactionCount > FREE_TRANSACTIONS) {
 			super.withdraw(TRANSACTION_FEE * (transactionCount - FREE_TRANSACTIONS));
 		}
 		transactionCount = 0;
 	}
+
+	@Override
+	public String toString() {
+		return getClass().getName() + "[balance=" + getBalance() + ",transactionCount=" + transactionCount + "]";
+	}
+
 }
