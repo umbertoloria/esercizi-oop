@@ -1,4 +1,4 @@
-package settimana8;
+package settimana8.lezione;
 
 public class Pair<T> {
 

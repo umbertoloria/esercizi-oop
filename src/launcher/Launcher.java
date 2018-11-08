@@ -1,11 +1,11 @@
 package launcher;
 
-import settimana8.Pair;
+import settimana8.esercizio4.AziendaTest;
 
 public abstract class Launcher {
 
 	public static void main(String[] args) {
-		Pair.main();
+		AziendaTest.main();
 	}
 
 }
