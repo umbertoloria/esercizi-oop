@@ -20,52 +20,54 @@ public class ElencoContenitori implements Iterator<Contenitore> {
 		Usando Native Comparator:   Comparator.comparing(Contenitore::getNome)
 	*/
 
+	/**
+	 Constructs an ElencoContenitori with no Contenitori.
+	 */
 	public ElencoContenitori() {
 		contenitori = new ArrayList<>();
 	}
 
+	/**
+	 Adds a Contenitore in this ElencoContenitori.
+	 @param c is the Contenitore to add
+	 */
 	public void add(Contenitore c) {
 		contenitori.add(c);
 	}
 
+	/**
+	 Gets the first Contenitore in the ElencoContenitori ordered by code or by name.
+	 @param perNome defines the order-mode ({@code true} for name, {@code false} for code)
+	 @return the first Contenitore in this list
+	 */
 	public Contenitore getMin(boolean perNome) {
 		return Collections.min(contenitori, perNome ? ordine_nome : null);
 	}
 
+	/**
+	 Gets the last Contenitore in the ElencoContenitori ordered by code or by name.
+	 @param perNome defines the order-mode ({@code true} for name, {@code false} for code)
+	 @return the last Contenitore in this list
+	 */
 	public Contenitore getMax(boolean perNome) {
 		return Collections.max(contenitori, perNome ? ordine_nome : null);
 	}
 
+	/**
+	 Gets {@code true} if there is an element to get.
+	 @return the next element
+	 */
 	public boolean hasNext() {
 		return index < contenitori.size();
 	}
 
+	/**
+	 Gets the next element to read.
+	 @return the next element
+	 @throws IndexOutOfBoundsException if there are no more elements.
+	 */
 	public Contenitore next() {
 		return contenitori.get(index++);
-	}
-
-	public static void main() {
-
-		ElencoContenitori ec = new ElencoContenitori();
-
-		ec.add(new ContenitoreCilindrico("Umberto", "Loria", 12, 50, 10, 10));
-		ec.add(new ContenitoreCubico("Michelantonio", "Panichella", 8, 50, 10));
-		ec.add(new ContenitoreCilindrico("Mario", "Romano", 5, 50, 10, 10));
-		ec.add(new ContenitoreCubico("Simone", "Calabrese", 5, 50, 10));
-		ec.add(new ContenitoreCubico("Antonio", "Napoli", 15, 50, 10));
-
-		System.out.println("ELENCO CONTENITORI");
-		while (ec.hasNext()) {
-			System.out.println(ec.next());
-		}
-		System.out.println();
-
-		System.out.println("MINOR CONTENITORE");
-		System.out.println(ec.getMin(true) + "\n");
-
-		System.out.println("MAGGIOR CONTENITORE");
-		System.out.println(ec.getMax(true) + "\n");
-
 	}
 
 }
