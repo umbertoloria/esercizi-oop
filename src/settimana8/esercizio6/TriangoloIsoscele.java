@@ -1,4 +1,4 @@
-package settimana8.esercizio5;
+package settimana8.esercizio6;
 
 public class TriangoloIsoscele extends FiguraGeometrica {
 
@@ -25,6 +25,11 @@ public class TriangoloIsoscele extends FiguraGeometrica {
 	@Override
 	public double getPerimetro() {
 		return 2 * getLato() + getBase();
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getName() + "[base=" + getBase() + ",altezza=" + altezza + "]";
 	}
 
 }

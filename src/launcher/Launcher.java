@@ -1,11 +1,11 @@
 package launcher;
 
-import traccie.azzardo.Lottomatica;
+import settimana8.esercizio8.TestSerial;
 
-public abstract class Launcher {
+public class Launcher {
 
 	public static void main(String[] args) {
-		Lottomatica.main();
+		TestSerial.main();
 	}
 
 }

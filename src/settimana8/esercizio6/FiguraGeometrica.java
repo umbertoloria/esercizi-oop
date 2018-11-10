@@ -1,4 +1,4 @@
-package settimana8.esercizio5;
+package settimana8.esercizio6;
 
 public abstract class FiguraGeometrica {
 
@@ -16,10 +16,6 @@ public abstract class FiguraGeometrica {
 
 	public abstract double getPerimetro();
 
-	public static void main() {
-		FiguraGeometrica a = new TriangoloIsoscele(7, 8);
-		System.out.println("Perimetro: " + a.getPerimetro());
-		System.out.println("Area     : " + a.getArea());
-	}
+	public abstract String toString();
 
 }

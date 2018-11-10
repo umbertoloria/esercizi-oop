@@ -1,4 +1,4 @@
-package settimana8.esercizio5;
+package settimana8.esercizio6;
 
 public class Cerchio extends FiguraGeometrica {
 
@@ -14,6 +14,11 @@ public class Cerchio extends FiguraGeometrica {
 	@Override
 	public double getPerimetro() {
 		return 2 * Math.PI * getBase();
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getName() + "[raggio=" + getBase() + "]";
 	}
 
 }

@@ -1,4 +1,4 @@
-package settimana8.esercizio5;
+package settimana8.esercizio6;
 
 public class Rettangolo extends FiguraGeometrica {
 
@@ -21,6 +21,11 @@ public class Rettangolo extends FiguraGeometrica {
 	@Override
 	public double getPerimetro() {
 		return 2 * (getBase() + altezza);
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getName() + "[base=" + getBase() + ",altezza=" + altezza + "]";
 	}
 
 }

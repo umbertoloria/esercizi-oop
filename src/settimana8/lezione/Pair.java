@@ -17,7 +17,7 @@ public class Pair<T> {
 		return second;
 	}
 
-	void swap() {
+	public void swap() {
 		T tmp = first;
 		first = second;
 		second = tmp;
