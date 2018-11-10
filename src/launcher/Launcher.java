@@ -1,11 +1,11 @@
 package launcher;
 
-import settimana8.esercizio8.TestSerial;
+import settimana8.esercizio9.ElencoContenitori;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		TestSerial.main();
+		ElencoContenitori.main();
 	}
 
 }
