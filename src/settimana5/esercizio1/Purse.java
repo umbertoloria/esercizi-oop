@@ -38,21 +38,25 @@ public class Purse {
 		return count == 1;
 	}
 
-	public boolean equals(Purse p) {
-		if (getTotal() != p.getTotal()) {
-			return false;
-		}
-		for (Coin a : coins) {
-			if (!p.hasCoin(a)) {
+	public boolean equals(Object obj) {
+		if (obj != null && getClass() == obj.getClass()) {
+			Purse p = (Purse) obj;
+			if (getTotal() != p.getTotal()) {
 				return false;
 			}
-		}
-		for (Coin b : p.coins) {
-			if (!hasCoin(b)) {
-				return false;
+			for (Coin coin : coins) {
+				if (!p.hasCoin(coin)) {
+					return false;
+				}
 			}
+			for (Coin coin : p.coins) {
+				if (!hasCoin(coin)) {
+					return false;
+				}
+			}
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	public String toString() {

@@ -26,11 +26,15 @@ public class Episode {
 		return getClass().getName() + "[title=" + title + "]\n" + next;
 	}
 
-	public boolean equals(Episode e) {
-		if (next == null) {
-			return title.toLowerCase().equals(e.title.toLowerCase()) && next == e.next;
+	public boolean equals(Object obj) {
+		if (obj != null && getClass() == obj.getClass()) {
+			Episode e = (Episode) obj;
+			if (next == null) {
+				return title.toLowerCase().equals(e.title.toLowerCase()) && e.next == null;
+			}
+			return title.toLowerCase().equals(e.title.toLowerCase()) && next.equals(e.next);
 		}
-		return title.toLowerCase().equals(e.title.toLowerCase()) && next.equals(e.next);
+		return false;
 	}
 
 }

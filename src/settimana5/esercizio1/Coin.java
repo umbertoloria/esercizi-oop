@@ -20,10 +20,6 @@ public class Coin implements Measurable, Cloneable {
 		return valore;
 	}
 
-	boolean equals(Coin moneta) {
-		return nome.equals(moneta.getNome());
-	}
-
 	public String toString() {
 		return "Coin[" + getNome() + " = " + getValore() + "]";
 	}
@@ -32,10 +28,10 @@ public class Coin implements Measurable, Cloneable {
 		return valore;
 	}
 
-	@Override
 	public boolean equals(Object obj) {
 		if (obj != null && getClass() == obj.getClass()) {
-			return nome.equals(((Coin) obj).nome) && valore == ((Coin) obj).valore;
+			Coin moneta = (Coin) obj;
+			return nome.equals(moneta.nome) && valore == moneta.valore;
 		}
 		return false;
 	}
