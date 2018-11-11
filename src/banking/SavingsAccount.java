@@ -23,7 +23,6 @@ public class SavingsAccount extends BankAccount {
 		deposit(getBalance() * interestRate / 100);
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[balance=" + getBalance() + ",interestRate=" + interestRate + "]";
 	}

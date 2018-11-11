@@ -23,7 +23,6 @@ public class Pair<T> {
 		second = tmp;
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[first=" + first + ",second=" + second + "]";
 	}

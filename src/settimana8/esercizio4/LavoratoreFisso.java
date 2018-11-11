@@ -6,8 +6,8 @@ public class LavoratoreFisso extends Lavoratore {
 		super(nome, cognome, pagaOraria);
 	}
 
-	@Override
 	public double getPaga() {
 		return getPagaOraria() * 40;
 	}
+
 }

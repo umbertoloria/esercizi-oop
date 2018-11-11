@@ -48,7 +48,6 @@ public class BankAccount implements Cloneable {
 		other.deposit(amount);
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[balance=" + balance + "]";
 	}

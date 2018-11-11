@@ -40,7 +40,6 @@ public class Lavoratore {
 		return pagaOraria * (40 + (oreDiLavoro - 40) * 1.5);
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[nome=" + nome + ",cognome=" + nome + ",pagaOraria=" + pagaOraria + "," +
 				"oreDiLavoro=" + oreDiLavoro + "]";

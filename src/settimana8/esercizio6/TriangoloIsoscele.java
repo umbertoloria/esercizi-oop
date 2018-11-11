@@ -17,17 +17,14 @@ public class TriangoloIsoscele extends FiguraGeometrica {
 		return altezza;
 	}
 
-	@Override
 	public double getArea() {
 		return getBase() * altezza / 2;
 	}
 
-	@Override
 	public double getPerimetro() {
 		return 2 * getLato() + getBase();
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[base=" + getBase() + ",altezza=" + altezza + "]";
 	}

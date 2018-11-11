@@ -17,13 +17,11 @@ public class CheckingAccount extends BankAccount {
 		super(initialBalance);
 	}
 
-	@Override
 	public void deposit(double amount) {
 		super.deposit(amount);
 		transactionCount++;
 	}
 
-	@Override
 	public void withdraw(double amount) {
 		super.withdraw(amount);
 		transactionCount++;
@@ -39,7 +37,6 @@ public class CheckingAccount extends BankAccount {
 		transactionCount = 0;
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[balance=" + getBalance() + ",transactionCount=" + transactionCount + "]";
 	}

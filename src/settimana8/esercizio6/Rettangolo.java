@@ -13,17 +13,14 @@ public class Rettangolo extends FiguraGeometrica {
 		return altezza;
 	}
 
-	@Override
 	public double getArea() {
 		return getBase() * altezza;
 	}
 
-	@Override
 	public double getPerimetro() {
 		return 2 * (getBase() + altezza);
 	}
 
-	@Override
 	public String toString() {
 		return getClass().getName() + "[base=" + getBase() + ",altezza=" + altezza + "]";
 	}

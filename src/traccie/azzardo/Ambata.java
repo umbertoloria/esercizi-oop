@@ -9,7 +9,6 @@ class Ambata extends Gioco {
 		super(costo);
 	}
 
-	@Override
 	public boolean gioca() {
 		numero = genera();
 		boolean res = false;
@@ -37,7 +36,6 @@ class Ambata extends Gioco {
 		return res;
 	}
 
-	@Override
 	public double dammiVincita() {
 		for (int i : estratti) {
 			if (i == numero) {
@@ -47,7 +45,6 @@ class Ambata extends Gioco {
 		return 0;
 	}
 
-	@Override
 	public String toString() {
 		String res = getClass().getName() + "[costo=";
 		res += getCosto() + ",estratti=[";

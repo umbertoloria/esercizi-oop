@@ -9,7 +9,6 @@ class CartaAlta extends Gioco {
 		super(costo);
 	}
 
-	@Override
 	public boolean gioca() {
 		banco[0] = genera();
 		banco[1] = genera();
@@ -22,7 +21,6 @@ class CartaAlta extends Gioco {
 		return mano[0] > banco[0] && mano[1] > banco[1];
 	}
 
-	@Override
 	public double dammiVincita() {
 		if (mano[0] > banco[0] && mano[1] > banco[1]) {
 			return getCosto() * 5;
@@ -30,7 +28,6 @@ class CartaAlta extends Gioco {
 		return 0;
 	}
 
-	@Override
 	public String toString() {
 		String res = getClass().getName() + "[costo=";
 		res += getCosto() + ",banco=[" + banco[0] + ",";
