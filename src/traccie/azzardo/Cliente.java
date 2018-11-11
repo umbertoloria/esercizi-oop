@@ -13,14 +13,10 @@ class Cliente {
 	Cliente(String codiceFiscale, double saldo) {
 		this.codiceFiscale = codiceFiscale;
 		this.saldo = saldo;
-		for (int i = 0; i < 10; i++) {
-			giocaPartita();
-		}
-		System.out.println("SALDO INIZIALE : " + saldo);
-		System.out.println("SALDO FINALE   : " + this.saldo);
+		this.saldoIniziale = saldo;
 	}
 
-	private void giocaPartita() {
+	void giocaPartita() {
 		if (saldo > 0) {
 			System.out.println("GIOCO NUMERO " + (partite + 1));
 			Gioco gioco = new Random().nextBoolean() ? ca : a;
@@ -36,6 +32,14 @@ class Cliente {
 			System.out.println(")\n");
 			partite++;
 		}
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public double getSaldoIniziale() {
+		return saldoIniziale;
 	}
 
 	public String toString() {
