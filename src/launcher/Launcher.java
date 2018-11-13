@@ -1,11 +1,11 @@
 package launcher;
 
-import traccie.libreria.Biblioteca;
+import traccie.domotica.launcher.DomoticaTest;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		Biblioteca.main();
+		DomoticaTest.main();
 	}
 
 }
