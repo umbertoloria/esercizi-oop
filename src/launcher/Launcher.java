@@ -1,11 +1,11 @@
 package launcher;
 
-import traccie.domotica.launcher.DomoticaTest;
+import settimana10.esercizio2.CodaLinkata;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		DomoticaTest.main();
+		CodaLinkata.main();
 	}
 
 }
