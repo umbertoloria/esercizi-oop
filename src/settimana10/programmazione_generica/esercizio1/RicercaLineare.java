@@ -1,4 +1,4 @@
-package settimana10.esercizio1;
+package settimana10.programmazione_generica.esercizio1;
 
 public class RicercaLineare {
 

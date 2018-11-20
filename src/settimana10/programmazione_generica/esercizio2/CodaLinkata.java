@@ -1,4 +1,4 @@
-package settimana10.esercizio2;
+package settimana10.programmazione_generica.esercizio2;
 
 public class CodaLinkata<E> {
 

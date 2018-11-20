@@ -1,4 +1,4 @@
-package settimana10.esercizio2;
+package settimana10.programmazione_generica.esercizio2;
 
 public class ListaLinkata<E> {
 
@@ -49,11 +49,10 @@ public class ListaLinkata<E> {
 			} else {
 				Item<E> app = first;
 				int i = 0;
-				while (i < index - 1/* && app.next != null*/) {
+				while (i < index - 1) {
 					app = app.next;
 					i++;
 				}
-				//assert app.next != null;
 				app.next = app.next.next;
 			}
 			size--;
