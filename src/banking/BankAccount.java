@@ -9,24 +9,38 @@ public class BankAccount implements Cloneable {
 	/**
 	 Constructs a Bank Account with the initial balance assigned.
 	 @param initialBalance will be the new initial balance
+	 @throws IllegalArgumentException if the initial balance is negative
 	 */
 	public BankAccount(double initialBalance) {
+		if (initialBalance < 0) {
+			throw new IllegalArgumentException("The initial balance must not be negative.");
+		}
 		this.balance = initialBalance;
 	}
 
 	/**
 	 Deposits money into the Bank Account.
 	 @param amount will be deposited
+	 @throws IllegalArgumentException if the amount is not positive
 	 */
 	public void deposit(double amount) {
+		if (amount <= 0) {
+			throw new IllegalArgumentException("The deposit amount must be positive.");
+		}
 		this.balance += amount;
 	}
 
 	/**
 	 Withdraws money from the Bank Account.
 	 @param amount will be withdrawn
+	 @throws IllegalArgumentException if the amount is not positive or if there is not enough money
 	 */
 	public void withdraw(double amount) {
+		if (amount <= 0) {
+			throw new IllegalArgumentException("The amount must be positive.");
+		} else if (amount > balance) {
+			throw new IllegalArgumentException("There is not enough money.");
+		}
 		this.balance -= amount;
 	}
 
@@ -44,7 +58,7 @@ public class BankAccount implements Cloneable {
 	 @param other  will get the amount of money, taken out from the bank account that's willing to transfer the money
 	 */
 	void transfer(double amount, BankAccount other) {
-		withdraw(amount);
+		this.withdraw(amount);
 		other.deposit(amount);
 	}
 
@@ -62,7 +76,7 @@ public class BankAccount implements Cloneable {
 
 	public void print() {
 		System.out.println(this);
-		System.out.printf("Saldo: %6.2f €\n", balance);
+		System.out.printf("Saldo: %6.2f€\n", balance);
 	}
 
 }

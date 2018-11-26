@@ -10,6 +10,7 @@ public class SavingsAccount extends BankAccount {
 	 Constructs a Savings Account with the initial balance assigned.
 	 @param initialBalance      will be the new initial balance
 	 @param initialInterestRate will be the initial interest rate
+	 @throws IllegalArgumentException if the initial balance is negative
 	 */
 	SavingsAccount(double initialBalance, double initialInterestRate) {
 		super(initialBalance);

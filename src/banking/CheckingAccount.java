@@ -12,6 +12,7 @@ public class CheckingAccount extends BankAccount {
 	/**
 	 Constructs a Checking Account with the initial balance assigned.
 	 @param initialBalance will be the new initial balance
+	 @throws IllegalArgumentException if the initial balance is negative
 	 */
 	CheckingAccount(double initialBalance) {
 		super(initialBalance);

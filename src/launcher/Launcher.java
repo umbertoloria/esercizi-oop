@@ -1,11 +1,11 @@
 package launcher;
 
-import settimana10.java_collection_framework.esercizio4.Library;
+import settimana11.esercizio2.NumberInputsTest;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		Library.main();
+		NumberInputsTest.main();
 	}
 
 }

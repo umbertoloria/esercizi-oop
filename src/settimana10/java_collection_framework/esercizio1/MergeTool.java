@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MergeTool {
 
-	public static <T> LinkedList<T> merge(List<T> a, List<T> b) throws IllegalArgumentException {
+	public static <T> LinkedList<T> merge(List<T> a, List<T> b) {
 		if (a.size() != b.size()) {
 			throw new IllegalArgumentException("Le liste fornite hanno taglie differenti");
 		}

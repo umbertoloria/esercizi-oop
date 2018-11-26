@@ -20,7 +20,7 @@ public class Month {
 
 	private int month;
 
-	public Month(int month) throws RuntimeException {
+	public Month(int month) {
 		if (month < GENNAIO || month > DICEMBRE) {
 			throw new RuntimeException();
 		}

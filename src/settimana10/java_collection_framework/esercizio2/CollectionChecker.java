@@ -15,7 +15,7 @@ public class CollectionChecker {
 		return true;
 	}
 
-	public static <T> boolean isSorted(Collection<T> coll, Comparator<T> comp) throws IllegalArgumentException {
+	public static <T> boolean isSorted(Collection<T> coll, Comparator<T> comp) {
 		if (coll.isEmpty()) {
 			throw new IllegalArgumentException();
 		}

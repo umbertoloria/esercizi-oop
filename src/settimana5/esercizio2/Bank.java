@@ -12,7 +12,7 @@ public class Bank {
 		accounts.put(customerName, new BankAccount(initialBalance));
 	}
 
-	public void deposit(String account, double amount) throws RuntimeException {
+	public void deposit(String account, double amount) {
 		BankAccount ba = accounts.get(account);
 		if (ba == null) {
 			throw new RuntimeException();
@@ -20,7 +20,7 @@ public class Bank {
 		ba.deposit(amount);
 	}
 
-	public void withdraw(String account, double amount) throws RuntimeException {
+	public void withdraw(String account, double amount) {
 		BankAccount ba = accounts.get(account);
 		if (ba == null) {
 			throw new RuntimeException();
@@ -28,7 +28,7 @@ public class Bank {
 		ba.withdraw(amount);
 	}
 
-	public double getBalance(String account) throws RuntimeException {
+	public double getBalance(String account) {
 		BankAccount ba = accounts.get(account);
 		if (ba == null) {
 			throw new RuntimeException();
@@ -36,7 +36,7 @@ public class Bank {
 		return ba.getBalance();
 	}
 
-	public void transfer(String fromAccount, String toAccount, double amount) throws RuntimeException {
+	public void transfer(String fromAccount, String toAccount, double amount) {
 		BankAccount from = accounts.get(fromAccount);
 		if (from == null) {
 			throw new RuntimeException();
