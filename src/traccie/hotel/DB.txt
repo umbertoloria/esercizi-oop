@@ -1,0 +1,9 @@
+1	1	singola	100	tv bagno wifi
+1	2	singola	101	tv bagno wifi
+1	3	singola	102	tv bagno wifi
+1	4	matrimoniale	103	tv bagno wifi
+1	5	singola	104	tv bagno wifi
+2	1	doppia	105	tv bagno wifi
+2	2	singola	106	tv bagno wifi
+2	3	singola	107	tv bagno wifi
+2	4	matrimoniale	108	tv bagno wifi

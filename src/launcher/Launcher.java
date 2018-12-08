@@ -1,11 +1,11 @@
 package launcher;
 
-import traccie.piano_di_studio.Login;
+import traccie.hotel.forms.MainFrame;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		Login.main();
+		MainFrame.main(args);
 	}
 
 }
