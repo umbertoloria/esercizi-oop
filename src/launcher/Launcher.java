@@ -1,11 +1,11 @@
 package launcher;
 
-import traccie.hotel.forms.MainFrame;
+import traccie.mensa.launcher.Mensa;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		MainFrame.main(args);
+		Mensa.main();
 	}
 
 }

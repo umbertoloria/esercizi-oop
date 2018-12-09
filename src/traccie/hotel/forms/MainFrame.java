@@ -97,7 +97,7 @@ public class MainFrame extends JFrame {
 		contentPane.add(btnNewButton_1);
 	}
 
-	public static void main(String[] main) {
+	public static void main() {
 		JFileChooser f = new JFileChooser();
 		if (f.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) {
 			System.err.println("Impossibile aprire il file.");
