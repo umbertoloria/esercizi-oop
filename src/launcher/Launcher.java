@@ -1,11 +1,11 @@
 package launcher;
 
-import traccie.mensa.launcher.Mensa;
+import traccie.concessionaria.archivio.ArchivioMain;
 
 public class Launcher {
 
 	public static void main(String[] args) {
-		Mensa.main();
+		ArchivioMain.main();
 	}
 
 }

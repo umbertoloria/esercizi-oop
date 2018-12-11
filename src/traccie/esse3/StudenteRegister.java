@@ -1,4 +1,4 @@
-package traccie.piano_di_studio;
+package traccie.esse3;
 
 import javax.swing.*;
 import java.awt.*;

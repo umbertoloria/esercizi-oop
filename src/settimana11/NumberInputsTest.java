@@ -1,4 +1,4 @@
-package settimana11.esercizio2;
+package settimana11;
 
 import java.text.NumberFormat;
 import java.util.Scanner;
